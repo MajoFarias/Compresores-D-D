@@ -2018,8 +2018,8 @@ $(document).ready(function(){
     init : function(options) {
       var defaults = {
         menuWidth: 240,
-        edge: 'left',
-        closeOnClick: false
+        edge: 'right',
+        closeOnClick: true
       };
       options = $.extend(defaults, options);
 

@@ -2,25 +2,146 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Compresores D&D</title>
+	<link href="style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,600italic,700,700italic,900,300italic,300' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 	
 
 <header>
-		
+	<div class="navbar-fixed">
+	    <nav class="clearMargin">
+	      <div class="nav-wrapper container">
+	        <a href="#1" class="page-scroll brand-logo left"><img src="imgs/logo.png" alt=""></a>
+	        <a href="#1" data-activates="mobile-demo" class="page-scroll button-collapse right"><i class="material-icons">menu</i></a>
+			
+	        <ul class="right hide-on-med-and-down">
+	        	<p class="language"><a href="#1">English</a></p>
+		        <li><a class="page-scroll" href="#1">Inicio</a></li>
+		        <li><a class="page-scroll" href="#2">Compresores</a></li>
+		        <li><a class="page-scroll" href="#3">Ventajas</a></li>
+		        <li><a class="page-scroll" href="#4">Nuestra Compañia</a></li>
+		       	<li><a class="page-scroll" href="#3">Contacto</a></li>
+	        </ul>
+
+	        <ul class="side-nav" id="mobile-demo">
+		        <li><a class="page-scroll" href="#1">Inicio</a></li>
+		        <li><a class="page-scroll" href="#2">Nuestra Compañia</a></li>
+		        <li><a class="page-scroll" href="#3">Compresores</a></li>
+		        <li><a class="page-scroll" href="#4">Contacto</a></li>
+      		</ul>
+
+	      </div>
+	    </nav>
+  	</div>
+
 </header>
 	
-<section>
-	
+<section id="1" class="first">
+	<article class="container row">
+		<div class="col s6">
+		<h2>Compresor libre de aceite</h2>
+		<h1>Tecnología Scroll</h1>
+		<p>Es la última generación de compresores de paletas rotativas.</p>
+		</div>
+		<div class="col s6">
+			<img src="imgs/compresor1.png" alt="">
+		</div>
+	</article>
+</section>
+
+<section id="2" class="second">
+	<article class="container row">
+		<h2>Componentes</h2>
+	<div class="col s6">
+		<img src="imgs/compresor2.png" alt="">
+	</div>
+	<div class="col s6">
+		<ul>
+			<li>Compresor libre de aceite tecnología scroll.</li>
+			<li>Motor Eléctrico 220-440 Volts Tipo Premium.</li>
+			<li>Doble sistema de disipación de calor.</li>
+				<ul>
+				<li>Extractor de calor.</li>
+				<li>Post Enfriador con aletas de aluminio. </li>
+				</ul>
+			<li>Banco de condensados con dren automático y válvulas de seguridad.</li>
+			<li>Mangueras de teflón reforzadas con malla de acero.</li>
+			<li>Banco de filtración grado médico con reguladores y válvulas de seguridad de acuerdo a norma NFPA 99.</li>
+				<ul>
+					<li>Filtro de partículas hasta 1 micrón.</li>
+					<li>Filtro de micropartículas hasta 0.1.</li>
+					<li>Filtro de eliminación de olor y sabor 0.01 micrón.</li>
+				</ul>
+			<li>Secador refrigerativo con monitor de punto de rocío.</li>
+			<li>Conexiones de acero inoxidable.</li>
+			<li>Tablero de control tipo NEMA 12 y Pantalla Digital (PLC). </li>
+			<li>Alarma audiovisual.</li>
+			<li>Control de secuencia de operación de motores.</li>
+			<li>Interruptor de motor paro y arranque. </li>
+			<li>Monitor de CO.</li>
+			<li>Tanque estampado ASME con accesorios ( mirrila, dren, by-pass, válvulas de seguridad).</li>
+			<li>Tacones antivibratorios.</li>
+			</li>
+		</ul>
+	</div>
+
+	</article>
+
+</section>
+
+<section id="3" class="third">
+</section>
+
+<section id="4" class="fourth">
 </section>
 
 <footer>
 	
 </footer>
 
+
 </body>
-<script type="text/javascript" src="assets/js/materialize.js">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".button-collapse").sideNav();
+
+		//Scroll page//
+		$('a.page-scroll').bind('click', function(event) {
+	        var $anchor = $(this);
+	        $('html, body').stop().animate({
+	            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+	        }, 1250);
+	        event.preventDefault();
+	    });
+  		
+  		//active
+  		$('ul li a').click(function(){
+    	$('li a').removeClass("active");
+    	$(this).addClass("active");
+		});
+
+    });
+
+
+	//menu animation
+    $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 100) {
+        $(".clearMargin").addClass("addMargin");
+    } else {
+        $(".clearMargin").removeClass("addMargin");
+    }
+	});
+
 </script>
+
+
 
 </html>

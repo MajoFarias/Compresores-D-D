@@ -1,0 +1,134 @@
+body{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.container{
+	max-width:1140px;
+	@media only screen and (max-width: 1280px){
+    width: 90%;
+	}
+}
+
+//menu
+.clearMargin{
+   transition: background-color .2s;
+   transition: margin .5s;
+   background-color:transparent;
+   margin-top:80px;
+   }
+
+
+.addMargin{
+	background-color:$blue;
+	margin-top:0px;
+
+}
+
+
+nav{
+		height:140px;
+		font-family: 'Titillium Web', sans-serif;
+		ul{
+			margin-top:10px;
+			li{
+				padding-right: 40px;
+				a{
+					text-transform: uppercase;
+					letter-spacing: 1.3px;
+					font-size: 14.5px;
+					line-height: 30px;
+					padding:0;
+					&:hover{
+						border-bottom: 2px solid white;
+						background-color:transparent;
+					}
+					&.active{
+						border-bottom: 2px solid white;
+						background-color:transparent;
+					}
+				}
+			}
+			li:nth-child(6){
+				padding-right:10px;
+				padding-left:10px;
+				a {
+				background-color:orange;
+				padding:5px 20px;
+					&:hover{
+						border-bottom: 0px solid white;
+					}
+					&.active{
+						border-bottom: 0px solid white;
+					}
+				}
+			}
+		}
+		img{
+			width: 55%;
+		}
+	}
+
+header{
+	background:$blue;
+}
+
+.language{
+	text-align:right;
+	line-height:14px;
+	a{
+	color:$bluelight;
+	}
+}
+
+.first{
+	background-image: url(imgs/eyecatcher.jpg);
+	background-repeat:no-repeat;
+	height:744px;
+	padding-top:260px;
+
+	article{
+		div:nth-child(1){
+			padding-top:70px; 
+
+			h1{
+				margin:0;
+				font-size: 65px;
+    			padding-top: 20px;
+				text-transform: uppercase;
+				color:white;
+				font-weight: 600;
+			}
+			h2{
+				margin:0;
+				font-size: 44px;
+    			font-weight: 600;
+				text-transform: uppercase;
+				color:$bluelight;
+			}
+			p{
+				font-size: 17px;
+    			color: white;
+    			font-weight: 200;
+			}
+		}
+	}
+}
+
+.second{
+	background-color:white;
+	
+
+}
+
+.third{
+	background-color:black;
+	height:500px;
+}
+
+.fourth{
+	background-color:pink;
+	height:500px;
+}
+
+
+
