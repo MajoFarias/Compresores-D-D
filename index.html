@@ -21,7 +21,7 @@
 			
 	        <ul class="right hide-on-med-and-down">
 	        	<p class="language"><a href="#1">English</a></p>
-		        <li><a class="page-scroll" href="#1">Inicio</a></li>
+		        <li><a class="page-scroll active" href="#1">Inicio</a></li>
 		        <li><a class="page-scroll" href="#2">Compresores</a></li>
 		        <li><a class="page-scroll" href="#3">Ventajas</a></li>
 		        <li><a class="page-scroll" href="#4">Nuestra Compañia</a></li>
@@ -95,6 +95,13 @@
 </section>
 
 <section id="3" class="third">
+	<article class="container row">
+		<div class="border-icon">	
+			<div class="icon">
+				<img src="imgs/icon-01.png" alt="">
+			</div>
+		</div>
+	</article>
 </section>
 
 <section id="4" class="fourth">
@@ -117,7 +124,7 @@
 	        var $anchor = $(this);
 	        $('html, body').stop().animate({
 	            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-	        }, 1250);
+	        }, 650);
 	        event.preventDefault();
 	    });
   		
@@ -127,7 +134,30 @@
     	$(this).addClass("active");
 		});
 
-    });
+		//activestate
+		var sections = $('section')
+  		, nav = $('nav')
+  		, nav_height = nav.outerHeight();
+ 
+		$(window).on('scroll', function () {
+  		var cur_pos = $(this).scrollTop();
+ 
+  		sections.each(function() {
+    	var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+ 
+    	if (cur_pos >= top && cur_pos <= bottom) {
+      	nav.find('a').removeClass('active');
+      	sections.removeClass('active');
+ 
+      	$(this).addClass('active');
+      	nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    	}
+  		
+  		});
+		
+		});
+ });
 
 
 	//menu animation

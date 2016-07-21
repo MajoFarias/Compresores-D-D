@@ -6692,13 +6692,34 @@ nav {
         letter-spacing: 1.3px;
         font-size: 14.5px;
         line-height: 30px;
-        padding: 0; }
+        padding: 0;
+        transition: all .2s linear; }
         nav ul li a:hover {
-          border-bottom: 2px solid white;
           background-color: transparent; }
         nav ul li a.active {
-          border-bottom: 2px solid white;
           background-color: transparent; }
+      nav ul li a:after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #CB9500;
+        margin-top: 3px !important;
+        text-align: center;
+        zoom: 1;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        -webkit-transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -ms-transition: opacity .25s ease-in-out;
+        -o-transition: opacity .25s ease-in-out;
+        transition: opacity .25s ease-in-out; }
+      nav ul li a:hover:after, nav ul li a.active:after {
+        zoom: 1;
+        filter: alpha(opacity=100);
+        opacity: 1;
+        left: 10px;
+        right: 20px; }
     nav ul li:nth-child(6) {
       padding-right: 10px;
       padding-left: 10px; }
@@ -6713,7 +6734,8 @@ nav {
     width: 55%; }
 
 header {
-  background: #00458c; }
+  background: #00458c;
+  position: fixed; }
 
 .language {
   text-align: right;
@@ -6750,8 +6772,36 @@ header {
   background-color: white; }
 
 .third {
-  background-color: black;
+  background-color: white;
   height: 500px; }
+  .third div.icon {
+    background: #009fdd none repeat scroll 0 0;
+    border-radius: 100%;
+    display: table;
+    height: 71px;
+    margin: 0 auto 22px;
+    width: 71px;
+    position: relative; }
+    .third div.icon img {
+      width: 51px; }
+  .third div.icon:after {
+    border: 6px solid #1b3545;
+    border-radius: 500px;
+    content: "";
+    height: 83px;
+    left: -6px !important;
+    opacity: 0;
+    position: absolute;
+    top: -6px !important;
+    transform: scale(1.5);
+    transition: all 0.5s ease 0s;
+    width: 83px; }
+
+.border-icon:hover .icon::after {
+  left: 0;
+  opacity: 1;
+  top: 0;
+  transform: scale(1); }
 
 .fourth {
   background-color: pink;
