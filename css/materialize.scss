@@ -2538,6 +2538,9 @@ input::-moz-focus-inner {
  */
 input {
   line-height: normal;
+  color:white;
+  font-weight: 200;
+  margin-bottom: -7px !important;
 }
 
 /**
@@ -4375,7 +4378,7 @@ em {
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 small {
@@ -5517,7 +5520,7 @@ input[type=search],
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid white;
   border-radius: 0;
   outline: none;
   height: 3rem;
@@ -5601,7 +5604,7 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
+  border-bottom: 3px solid $bluelight;
   box-shadow: 0 1px 0 0 #26a69a;
 }
 
@@ -5618,7 +5621,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #26a69a;
+  color: white;
 }
 
 input:not([type]).valid, input:not([type]):focus.valid,
@@ -5646,8 +5649,7 @@ input[type=search].valid,
 input[type=search]:focus.valid,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea:focus.valid {
-  border-bottom: 1px solid #4CAF50;
-  box-shadow: 0 1px 0 0 #4CAF50;
+  /*border-bottom: 1px solid $bluelight;*/
 }
 
 input:not([type]).valid + label:after,
@@ -5706,7 +5708,7 @@ input[type=search].invalid,
 input[type=search]:focus.invalid,
 textarea.materialize-textarea.invalid,
 textarea.materialize-textarea:focus.invalid {
-  border-bottom: 1px solid #F44336;
+  border-bottom: 1px solid $bluelight;
   box-shadow: 0 1px 0 0 #F44336;
 }
 
@@ -5785,9 +5787,10 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field label {
-  color: #9e9e9e;
+  color: white;
   position: absolute;
-  top: 0.8rem;
+  font-weight: 200;
+  top: -1rem;
   left: 0.75rem;
   font-size: 1rem;
   cursor: text;
@@ -5795,9 +5798,12 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field label.active {
-  font-size: 0.8rem;
-  -webkit-transform: translateY(-140%);
-          transform: translateY(-140%);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color:white;
+  /*-webkit-transform: translateY(-100%);
+          transform: translateY(-100%);*/
 }
 
 .input-field .prefix {
@@ -5885,11 +5891,14 @@ textarea {
 
 textarea.materialize-textarea {
   overflow-y: hidden;
-  /* prevents scroll bar flash */
-  padding: 1.6rem 0;
-  /* prevents text jump on Enter keypress */
+  padding: .6rem 0;
   resize: none;
-  min-height: 3rem;
+  height: 1rem;
+  color: white;
+}
+
+textarea.materialize-textarea:active {
+  border-bottom:1px solid black;
 }
 
 .hiddendiv {
