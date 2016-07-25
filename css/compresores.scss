@@ -23,6 +23,9 @@ strong{
    transition: padding .5s;
    background-color:$blue;
    padding-top:80px;
+   @media (max-width:992px){
+		background-color:transparent;
+   }
    @media (max-width:600px){
    		padding-top:20px;
    }
@@ -163,6 +166,21 @@ header{
 	line-height:14px;
 	a{
 	color:$bluelight;
+	}
+	@media (max-width:992px){
+		text-align:left;
+		a{
+			color: $bluemedium;
+    		border: solid 2px $bluemedium;
+    		margin: 0 110px 0 20px;
+    		height: 50px;
+    		padding-left: 10px;
+    		line-height: 45px;
+    		&:hover{
+    			background-color: $bluemedium;
+    			color:white;
+    		}
+		}
 	}
 }
 
@@ -331,6 +349,29 @@ header{
 				}
 			}
 		}
+	}
+	article{
+		.order-div{
+		@include flexFlow;
+			div:nth-child(1){
+				@include order(1);
+			}
+			div:nth-child(2){
+				@include order (2);
+			}
+			
+			@media (max-width:600px){
+				div:nth-child(1){
+					@include order(2);
+				}
+				div:nth-child(2){
+					@include order(1);
+				}
+			}
+
+		}
+
+		
 	}	
 
 }
@@ -442,6 +483,7 @@ header{
     @media (max-width:415px){
     	border-right:1px solid transparent;
     	margin-bottom: 5px;
+    	height: 190px;
 
     }
 }

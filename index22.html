@@ -203,30 +203,30 @@ rotativas.</p>
 		</div>
 		<div class="form col s12 xm m7 l6 wow fadeIn">
 			<div class="row">
-			    <form class="col s12" action="javascript:void(0);" method="POST">
+			    <form class="col s12">
 			      <div class="row">
 			        <div class="input-field col s12">
-			          <input id="name" type="text" class="validate" required onkeypress="return validate_text_number(event,'text')">
+			          <input id="first_name" type="text" class="validate">
 			          <label for="first_name">Nombre</label>
 			        </div>
 			      </div>
 			      <div class="row">
 			        <div class="input-field col s12 m6">
-			          <input id="email" type="email" class="validate" required>
+			          <input id="first_name" type="text" class="validate">
 			          <label for="first_name" placeholder="Email" >Email</label>
 			        </div>
 			        <div class="input-field col s12 m6 tel">
-			          <input id="phone" type="text" class="validate" required onkeypress="return validate_text_number(event,'number')">
+			          <input id="password" type="text" class="validate">
 			          <label for="password">Teléfono</label>
 			        </div>
 			      </div>
 			      <div class="row">
 			        <div class="input-field col s12">
-			          <textarea id="message" class="materialize-textarea" required onkeypress="return validate_text_number(event,'text')"></textarea>
+			          <textarea id="textarea1" class="materialize-textarea"></textarea>
 			          <label for="textarea1">Mensaje</label>
 			        </div>
 			      </div>
-  					<button  class="col s12 btnSend">Enviar</button>
+  					<button class="col s12">Enviar</button>
 			    </form>
   			</div>
 		</div>
@@ -250,7 +250,7 @@ C.P. 04460, Ciudad de México.</p>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
 <script src="js/wow.js"></script>
-<script src="js/contact.js"></script>
+
 <script>
 
 $(document).ready(function(){
@@ -318,11 +318,11 @@ $(document).ready(function(){
       }
     );
     wow.init();
-    /*document.getElementById('moar').onclick = function() {
+    document.getElementById('moar').onclick = function() {
       var section = document.createElement('section');
       section.className = 'section--purple wow fadeInDown';
       this.parentNode.insertBefore(section, this);
-    };*/
+    };
 
 
 </script>
